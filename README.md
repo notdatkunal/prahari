@@ -120,25 +120,25 @@ It replaces antiquated paper guest registers with a **tamper-proof digital check
 
 ---
 
-## ⚡ Benchmarks & Load Testing (\`wrk\`)
+## ⚡ Benchmarks & Load Testing (`wrk`)
 
-Load testing conducted on the **Prahari Core API Gateway** using \`wrk\` under **1,000 concurrent connections** across 12 threads for 30 seconds:
+Load testing conducted on the **Prahari Core API Gateway** using `wrk` under **1,000 concurrent connections** across 12 threads for 30 seconds:
 
-\`\`\`bash
+```bash
 wrk -t12 -c1000 -d30s -s scripts/checkin_payload.lua https://api.prahari.gov.in/api/v1/visitors/check-in
-\`\`\`
+```
 
-### 📊 Benchmark Results (\`POST /api/v1/visitors/check-in\`)
-- **Throughput:** \`14,248.62 requests/sec\` (Total: 427,458 requests in 30s)
-- **Data Transferred:** \`182.44 MB\` (6.08 MB/sec)
-- **Error Rate:** \`0.00%\` (0 connect / 0 read / 0 write / 0 timeout errors)
+### 📊 Benchmark Results (`POST /api/v1/visitors/check-in`)
+- **Throughput:** `14,248.62 requests/sec` (Total: 427,458 requests in 30s)
+- **Data Transferred:** `182.44 MB` (6.08 MB/sec)
+- **Error Rate:** `0.00%` (0 connect / 0 read / 0 write / 0 timeout errors)
 
 | Metric | Latency (ms) | Target SLA | Status |
 | :--- | :---: | :---: | :---: |
-| **p50 (Median)** | \`18.24 ms\` | < 50 ms | ✅ PASSED |
-| **p90** | \`34.12 ms\` | < 80 ms | ✅ PASSED |
-| **p99** | \`58.60 ms\` | < 120 ms | ✅ PASSED |
-| **Max** | \`89.45 ms\` | < 200 ms | ✅ PASSED |
+| **p50 (Median)** | `18.24 ms` | < 50 ms | ✅ PASSED |
+| **p90** | `34.12 ms` | < 80 ms | ✅ PASSED |
+| **p99** | `58.60 ms` | < 120 ms | ✅ PASSED |
+| **Max** | `89.45 ms` | < 200 ms | ✅ PASSED |
 
 ## 📈 Repository Telemetry & Star History
 
